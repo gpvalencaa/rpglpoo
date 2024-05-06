@@ -1,0 +1,43 @@
+Personagens.java
+String nome
+Int saude
+Int mana
+
+    
+
+andar
+interagir
+
+
+
+Npc.java
+Int posicao
+
+açao
+
+
+
+
+Item.java
+int caracteristica (1 a 4) - Ataque, cura, proteção e trapaça
+
+
+        
+
+
+
+
+
+
+
+
+Controle.java
+
+
+
+Dialogos.java
+
+
+
+
+

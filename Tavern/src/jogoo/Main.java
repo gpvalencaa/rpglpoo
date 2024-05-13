@@ -5,10 +5,13 @@ package jogoo;
 public class Main {
     private Container frame;
     private Personagem guerreiro;
-    private Personagem fada;
+    private Oponente monstro;
     public void main(String[] args) {
+
         //frame = new Container();
-         
+        
+        guerreiro = new Personagem();
+        monstro = new Oponente("Monstro");
 
 
 

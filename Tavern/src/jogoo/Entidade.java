@@ -7,6 +7,8 @@ public class Entidade {
     String nome;
     int pontosPoder;
     int moedas;
+    int posicaoX;
+    int posicaoY;
 
     public Entidade(){
            
@@ -53,5 +55,21 @@ public class Entidade {
 
     public void ataque (Entidade atacado,int quantidadePV){
         atacado.alteraVida(-quantidadePV);
+    }
+
+    public int getPosicaoX() {
+        return posicaoX;
+    }
+
+    public int getPosicaoY() {
+        return posicaoY;
+    }
+
+    public void interagir(int posicaoXInteragido, int posicaoYInteragido){
+        if (this.posicaoX == posicaoXInteragido && this.posicaoY == posicaoYInteragido){
+            //tela de interação
+
+
+        }
     }
 }

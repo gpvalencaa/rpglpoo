@@ -1,4 +1,4 @@
-package jogoo;
+package ambiente;
 
 public class Item {
     String nomeItem;

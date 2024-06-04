@@ -1,4 +1,4 @@
-package jogoo;
+package ambienteTecnico;
 
 import java.awt.Graphics;
 import java.awt.Image;

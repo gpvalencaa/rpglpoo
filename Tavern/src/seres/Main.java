@@ -1,4 +1,6 @@
-package jogoo;
+package seres;
+
+import ambienteTecnico.Container;
 
 //import java.awt.Menu;
 
@@ -10,7 +12,7 @@ public class Main {
 
         //frame = new Container();
         
-        guerreiro = new Personagem();
+        /*guerreiro = new Personagem();
         monstro = new Oponente("Monstro");
         while (guerreiro.getVida() > 0 &&  monstro.getVida() > 0 ){
             guerreiro.ataqueUsuario(monstro, 50 );
@@ -20,7 +22,7 @@ public class Main {
             System.out.println("O monstro atacou! Sua vida é: " + guerreiro.getVida());
 
 
-        }
+        */
 
 
 

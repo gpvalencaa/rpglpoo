@@ -19,7 +19,7 @@ açao
 
 
 Item.java
-int caracteristica (1 a 4) - Ataque, cura, proteção e trapaça
+int caracteristica (1 a 4) - Ataque, cura, proteção
 
 
         

@@ -1,4 +1,4 @@
-package jogoo;
+package ambienteTecnico;
 
 import javax.swing.JFrame;
 //import javax.swing.JLabel;

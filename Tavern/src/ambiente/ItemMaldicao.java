@@ -1,4 +1,6 @@
-package jogoo;
+package ambiente;
+
+import seres.Entidade;
 
 public class ItemMaldicao extends Item{
     public ItemMaldicao (){

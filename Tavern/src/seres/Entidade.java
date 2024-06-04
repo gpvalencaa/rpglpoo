@@ -1,4 +1,4 @@
-package jogoo;
+package seres;
 
 import java.util.Scanner;
 
@@ -6,7 +6,6 @@ public class Entidade {
     int vida;
     String nome;
     int pontosPoder;
-    int moedas;
     int posicaoX;
     int posicaoY;
 
@@ -27,10 +26,6 @@ public class Entidade {
         return this.vida;
     }
 
-    public int getMoedas () {
-        return this.moedas;
-    }
-
     public int getPontosPoder () {
         return this.pontosPoder;
     }
@@ -47,10 +42,7 @@ public class Entidade {
         vida = vida + quantidade;
     }
 
-    public void alteraMoedas (int quantidade) {
-        moedas = moedas + quantidade;
-
-    }
+    
 
 
     public void ataque (Entidade atacado,int quantidadePV){
@@ -65,8 +57,13 @@ public class Entidade {
         return posicaoY;
     }
 
+    public void andar(int quantidadeX, int quantidadeY){
+        this.posicaoX = this.posicaoX + quantidadeX;
+        this.posicaoY = this.posicaoY + quantidadeY;
+    }
+
     public void interagir(int posicaoXInteragido, int posicaoYInteragido){
-        if (this.posicaoX == posicaoXInteragido && this.posicaoY == posicaoYInteragido){
+        if (this.posicaoX == posicaoXInteragido && this.posicaoY == posicaoYInteragido) {
             //tela de interação
 
 

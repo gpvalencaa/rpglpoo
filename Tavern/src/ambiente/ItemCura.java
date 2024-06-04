@@ -1,4 +1,6 @@
-package jogoo;
+package ambiente;
+
+import seres.Entidade;
 
 public class ItemCura extends Item{
     public ItemCura(){
@@ -7,7 +9,6 @@ public class ItemCura extends Item{
 
     public void curaEntidade (Entidade curada){
         curada.alteraVida(50);
-
     }
 
     

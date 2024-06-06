@@ -1,7 +1,7 @@
 package ambiente;
 
 public class Item {
-    String nomeItem;
+    private String nomeItem;
 
     public Item (String nome){
         nomeItem = nome;

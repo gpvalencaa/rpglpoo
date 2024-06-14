@@ -3,9 +3,9 @@ package seres;
 import java.util.Scanner;
 
 public class Entidade {
-    int vida;
-    String nome;
-    int pontosPoder;
+    protected int vida;
+    protected String nome;
+    protected int pontosPoder;
     int posicaoX;
     int posicaoY;
 

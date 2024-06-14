@@ -17,12 +17,21 @@ public class Tela extends JPanel implements Runnable{
     final int larguraTela = tamanhoDefault * quantidadeMaxTerrenoX;
     final int alturaTela = tamanhoDefault * quantidadeMaxTerrenoY;
 
+    int fps = 60;
+
+    Teclado teclado = new Teclado();
     Thread threadJogo;
+
+    int posX = 100;
+    int posY = 100;
+    int velocidadePlayer = 4;
 
     public Tela(){
         this.setPreferredSize(new Dimension(larguraTela, alturaTela));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
+        this.addKeyListener(teclado);
+        this.setFocusable(true);
     }
 
     public void comecaThreadJogo(){
@@ -32,16 +41,51 @@ public class Tela extends JPanel implements Runnable{
 
     @Override
     public void run() {
+
+        double intervaloDesenho = 1000000000/fps;
+        double proximoDesenho = System.nanoTime() + intervaloDesenho;
+
         while(threadJogo != null){
             System.out.println("Game loop rodando!");
+
+            long tempoAtual = System.nanoTime();
+
+            update();
+
+            repaint();
+
+
+            try {
+                double tempoRestante = proximoDesenho - System.nanoTime();
+                tempoRestante = tempoRestante/1000000;
+
+                if (tempoRestante < 0){
+                    tempoRestante = 0;
+                }
+
+                Thread.sleep((long) tempoRestante);
+
+                proximoDesenho += intervaloDesenho; 
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
         }
-        update();
-        repaint();
+        
         
     }
 
     public void update(){
-
+        if (teclado.pressionouCima == true){
+            posY -= velocidadePlayer;
+        } else if (teclado.pressionouBaixo == true){
+            posY += velocidadePlayer;
+        } else if (teclado.pressionouDireita == true){
+            posX += velocidadePlayer;
+        } else if (teclado.pressionouEsquerda == true){
+            posX -= velocidadePlayer;
+        }
     }
 
     @Override
@@ -52,7 +96,7 @@ public class Tela extends JPanel implements Runnable{
 
 
         g2.setColor(Color.white);
-        g2.fillRect(100, 100, tamanhoDefault, tamanhoDefault);
+        g2.fillRect(posX, posY, tamanhoDefault, tamanhoDefault);
         g2.dispose();
     }
 }

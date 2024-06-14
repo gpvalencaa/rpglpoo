@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 
 public class Main {
     public static void main(String[] args) {
-        //Container container = new Container();
+        Container container = new Container();
         /*JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);

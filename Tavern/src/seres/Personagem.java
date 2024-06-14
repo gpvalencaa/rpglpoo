@@ -1,6 +1,6 @@
 package seres;
 import java.util.*;
-import progressao.*;
+import progressao.Inventario;
 import ambiente.*;
 
 public class Personagem extends Entidade{

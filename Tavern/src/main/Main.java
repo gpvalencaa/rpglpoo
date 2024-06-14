@@ -13,9 +13,9 @@ public class Main {
         frame.setResizable(false);
         frame.setTitle(null);*/
         System.out.println("yuio");
-        Personagem personagem = new Personagem();
+        //Personagem personagem = new Personagem();
         
-        System.out.println(personagem.getNivel());
+        //System.out.println(personagem.getNivel());
         
     }
 }

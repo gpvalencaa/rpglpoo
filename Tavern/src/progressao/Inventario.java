@@ -1,7 +1,6 @@
 package progressao;
 import java.util.PriorityQueue;
 import java.util.Queue;
-
 import ambiente.*;
 
 public class Inventario {

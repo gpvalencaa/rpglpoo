@@ -1,5 +1,6 @@
 package seres;
 
+import java.awt.image.BufferedImage;
 import java.util.Scanner;
 
 public class Entidade {
@@ -8,6 +9,9 @@ public class Entidade {
     protected int pontosPoder;
     int posicaoX;
     int posicaoY;
+    int velocidade;
+    public BufferedImage cima1, cima2, baixo1, baixo2, direita1, direita2, esquerda1, esquerda2;
+    public String direcao;
 
     public Entidade(){
            

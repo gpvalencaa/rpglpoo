@@ -7,11 +7,13 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
+import seres.Personagem;
+
 public class Tela extends JPanel implements Runnable{
 
     final int tamanhoDefaultOriginal = 16;
     final int escala = 3;
-    final int tamanhoDefault = tamanhoDefaultOriginal * escala;
+    public final int tamanhoDefault = tamanhoDefaultOriginal * escala;
     final int quantidadeMaxTerrenoX = 16;
     final int quantidadeMaxTerrenoY = 12;
     final int larguraTela = tamanhoDefault * quantidadeMaxTerrenoX;
@@ -21,6 +23,7 @@ public class Tela extends JPanel implements Runnable{
 
     Teclado teclado = new Teclado();
     Thread threadJogo;
+    Personagem personagemPrincipal = new Personagem(this, teclado); 
 
     int posX = 100;
     int posY = 100;
@@ -77,15 +80,8 @@ public class Tela extends JPanel implements Runnable{
     }
 
     public void update(){
-        if (teclado.pressionouCima == true){
-            posY -= velocidadePlayer;
-        } else if (teclado.pressionouBaixo == true){
-            posY += velocidadePlayer;
-        } else if (teclado.pressionouDireita == true){
-            posX += velocidadePlayer;
-        } else if (teclado.pressionouEsquerda == true){
-            posX -= velocidadePlayer;
-        }
+        personagemPrincipal.update();
+        
     }
 
     @Override
@@ -93,10 +89,8 @@ public class Tela extends JPanel implements Runnable{
         // TODO Auto-generated method stub
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D)g;
+        personagemPrincipal.draw(g2);
 
-
-        g2.setColor(Color.white);
-        g2.fillRect(posX, posY, tamanhoDefault, tamanhoDefault);
         g2.dispose();
     }
 }
